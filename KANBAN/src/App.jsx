@@ -1,16 +1,13 @@
-import { BrowserRouter } from 'react-router-dom'
-import './Style/main.scss'
-import { Rotas } from './Routes/Rotas'
+import './Style/main.scss';
+
+import { BrowserRouter } from 'react-router-dom';
+import { Rotas } from './Rotas/Rotas';
 
 function App() {
-
   return (
-    <>
-      <BrowserRouter>
-        <Rotas/>
-      </BrowserRouter>
-    </>
-  );
+    <BrowserRouter>
+      <Rotas/>
+    </BrowserRouter>
+  )
 }
-
 export default App

@@ -1,9 +1,11 @@
-@use "./variaveis" as *;
+@use './variaveis' as *;
 .cabecalho{
     background-color: $accent;
     height: 80px;
 
     h1{
-        color: $backgrond;
+        color:$backgrond;
+        font-family: $font-primary;
+        
     }
 }
