@@ -1,75 +1,11 @@
 @use './variaveis' as *;
 
-.formularios{
-    min-width: 500px;
-    min-height:500px ;
-    margin: 20px;
-    padding: 10px;
-    backdrop-filter: blur(16px);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap:10px;
-    justify-content: center ;
-    
-    
-    h2{
-        text-align: center;
-        margin-bottom: 2px;
-        font-size: 18px;
-        font-family: Arial, Helvetica, sans-serif;
-        color:$primary;
-    }
-     p{
-        color: white;
-        display: flex;
-        justify-content: center;
-     }
-
-        label{
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: $primary
-        }
-        input, textarea{
-            padding: 10px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-        }
-        .sign_button{
-            padding: 10px;
-            background-color: $accent;
-            color: $backgrond;
-            font-size: 16px;
-            border: none; 
-            border-radius: 10px;
-            cursor: pointer;
-            margin-bottom: 20px;
-        }
-        .errors{
-            font-size: 12px;
-            color:red;             
-        }
-
-    .image_logo{
-    width: 20px;
-    height: 20px;
-    }
-    .google_button{
-        display: flex;
-          align-items: center;
-        justify-content: center;
-        gap: 10px;
-        padding: 10px;
-        font-size: 16px;
-        border-radius: 10px;
-        border: none;
-        cursor: pointer;
-         color: white;
-         background-color: transparent;
-    }
+//  valores de um link
+a{
+    color: white;
 }
+
+// responsavel pela pagina como um todo
 .conteiner_form{
     display: flex;
     width: 100vw;
@@ -78,17 +14,14 @@
     height: 100vh;
     align-items: center;
 }
-
+// caixa que se encaixa os textos 
 .box-left{
     display: flex;
     width: 50vw;
     justify-content: center;
 
 }
-
-
-
-
+// caixa do forms
 .box-right{
     display: flex;
     width: 50vw;
@@ -140,5 +73,92 @@
         font-size: 20px;
     }
 }
+
+
+
+
+.formularios{
+    // estilização do fundo e container do forms
+    min-width: 500px;
+    min-height:440px ;
+    margin: 20px;
+    padding: 10px;
+    backdrop-filter: blur(16px);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    justify-content: center ;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    
+    // inputs e botões iniciais
+        label{
+        font-weight: bold;
+        @include roboto-100;
+        color: white;
+        margin: 15px 15px 0px 15px;
+        }
+
+        input, textarea{
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            margin: 5px 15px 15px 15px;
+        }
+
+        .sign_button{
+            padding: 10px;
+            background-color: $accent;
+            color: $backgrond;
+            font-size: 16px;
+            border: none; 
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 20px;
+        }
+        .errors{
+            font-size: 12px;
+            color:red;             
+        }
+
+    .transition{
+        margin: 0;
+    }
+
+    h2{
+        text-align: center;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        color:$primary;
+    }
+     p{
+        color: white;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    
+
+
+    .image_logo{
+    width: 20px;
+    height: 20px;
+    }
+    .google_button{
+        display: flex;
+          align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+         color: white;
+         background-color: transparent;
+    }
+}
+
 
 

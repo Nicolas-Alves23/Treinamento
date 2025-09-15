@@ -36,7 +36,7 @@ export function EditarTarefa({ tarefa }){
  
     return(
         <article>
-            <h3 id={`tarefa: ${Tarefa.id}`}>{tarefa.descricao}</h3>
+            <h3 id={`tarefa: ${tarefa.id}`}>{tarefa.descricao}</h3>
             <dl>
                 <dt>Setor:</dt>
                 <dd>{tarefa.setor}</dd>

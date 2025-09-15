@@ -4,6 +4,7 @@ import axios from 'axios';//é o hook que faz a comunicação com a internet (Ht
 import { useForm } from 'react-hook-form';//Hook (use) aqui permite a validação de formulario
 import { z } from 'zod';//zod é uma descrição de como eu validar, quais seriam as regas
 import { zodResolver } from '@hookform/resolvers/zod';//é o liga o hook form com o zod
+import { Link } from 'react-router-dom'
 //validação de formulário -- estou usando as regras do zod, que pode ser consultada na web
 const schemaCadUsuario = z.object({
     nome: z.string()
@@ -56,7 +57,6 @@ export function CadUsuario() {
             <article className='box-right'>
 
                 <form className="formularios" onSubmit={handleSubmit(obterdados)}>
-                    <h2>Cadastro do Usuário</h2>
 
                     <label>Email</label>
                     <input type='text' placeholder='Enter your email' {...register("email")} />
@@ -71,16 +71,16 @@ export function CadUsuario() {
 
                     <button type='submit' className='sign_button'>SIGN IN</button>
 
-                    <div>
-                        <p>or</p>
-                    </div>
+                    
+                        <p className='transition'>or</p>
+                    
 
                     <button className='google_button'>
                         <img src="image/Google Logo.png" alt="Google Logo" className='image_logo' /> Sign in with Google
                     </button>
 
                     <p>
-                     Are you new User? Create an Account
+                     Are you new User?<Link to='novoUser'>Create an Account</Link> 
                     </p>
                 </form>
             </article>
